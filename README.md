@@ -41,13 +41,23 @@ All numeric claims are recomputed from scratch by two self-contained scripts
 (Python ≥3.8, standard library only).
 
 ```bash
-python verify_5x4.py            # 20 sums are squares
-python verify_shift_packet.py   # four-shift packet + D-intersection + negative check
+python verify_5x4.py             # 20 sums are squares
+python verify_shift_packet.py    # four-shift packet + D-intersection + negative check
+python verify_specialization.py  # m = -8/19 in exact rational arithmetic + negative control
 ```
 
-Exit code `0` = all checks pass. Both scripts are written so that perturbing any
-input value makes them fail (verified: changing one digit of `A` flips the exit
-code to `1`), so the checks are not vacuous.
+Exit code `0` = all checks pass. The scripts are written so that perturbing any
+input value makes them fail (verified: changing one digit of `A`, or replacing
+`m = -8/19` by `-8/17`, flips the exit code to `1`), so the checks are not vacuous.
+
+`verify_specialization.py` reproduces the `m = -8/19` specialization in exact rational
+arithmetic (`fractions.Fraction`, no floating point): the 15 base sums, the candidate
+fourth shift `b4 = -15740769200/1172889` from elliptic-curve addition, the evaluations
+`F2 = (35668080/130321)²` and `F4 = (32892048/130321)²`, the identities
+`a2 + b4 = 4·F2/D²` and `a4 + b4 = 4·F4/D²`, the invariant `λ(B) = 541359200/411195147`,
+and the certificate input `c − a = 291985920 = 2⁹·3²·5·19·23·29` with its 192 parity-
+compatible factor pairs. It also carries a **negative control**: at `m = +8/19` the
+values `F2`, `F4` are *not* rational squares, so the sign of the specialization is forced.
 
 **Results reproduced:**
 
@@ -77,6 +87,27 @@ code to `1`), so the checks are not vacuous.
   over 8410 primitive triples that found no five numbers sharing four differences.
 
 None of the above claims a resolution of `k = 5`, and neither do the papers here.
+
+---
+
+## Known discrepancy (open)
+
+Paper A §4 states that the Mausberg shift set has
+
+```
+λ(Mausberg) = 951142 / 921557 .
+```
+
+Recomputing the same invariant from the four-shift packet `(0, 79200, 227205, 1258560)`
+used elsewhere in these notes gives `28917 / 20102`, **not** `951142 / 921557`.
+The invariant for the shift set in paper A reproduces exactly
+(`λ = 541359200 / 411195147`), so the formula and its implementation agree with the
+paper; the mismatch is therefore either a typo in the paper or a reference to a
+different Mausberg packet than the one above.
+
+**This does not affect the qualitative claim** — the two invariant values are unequal
+either way, so the example is not affinely equivalent to Mausberg's — but the printed
+fraction should be checked against the source `.tex` before publication.
 
 ---
 
