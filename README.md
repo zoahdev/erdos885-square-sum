@@ -11,10 +11,15 @@
 
 ## Papers
 
-| # | File | Title | Pages |
-|---|------|-------|-------|
-| A | [`square_sum_specialization.pdf`](square_sum_specialization.pdf) | An explicit 5×4 square-sum specialization and a genus-13 reduction | 6 |
-| B | [`moving_lift_quotients.pdf`](moving_lift_quotients.pdf) | A split genus-three lift curve in a moving square-sum construction | 13 |
+| # | File | Title | Pages | DOI |
+|---|------|-------|-------|-----|
+| A | [`square_sum_specialization.pdf`](square_sum_specialization.pdf) | An explicit 5×4 square-sum specialization and a genus-13 reduction | 6 | [10.5281/zenodo.23040929](https://doi.org/10.5281/zenodo.23040929) |
+| B | [`moving_lift_quotients.pdf`](moving_lift_quotients.pdf) | A split genus-three lift curve in a moving square-sum construction | 13 | [10.5281/zenodo.23040933](https://doi.org/10.5281/zenodo.23040933) |
+
+Both are deposited on Zenodo (CC-BY-4.0, `publication_type: preprint`, publication date
+`2026-07-15`): <https://zenodo.org/records/23040929> and
+<https://zenodo.org/records/23040933>. The Zenodo deposits include the PDF plus the
+verification scripts listed below.
 
 ### A — explicit 5×4 specialization
 
@@ -125,7 +130,8 @@ fraction should be checked against the source `.tex` before publication.
 ## Links
 
 - Forum thread: https://www.erdosproblems.com/885
-- Preprint DOI (Zenodo): *TODO — add after Zenodo deposit*
+- Preprint A (Zenodo): https://zenodo.org/records/23040929 — DOI `10.5281/zenodo.23040929`
+- Preprint B (Zenodo): https://zenodo.org/records/23040933 — DOI `10.5281/zenodo.23040933`
 - Forum comment by the author: *TODO — add link after posting*
 
 ---
