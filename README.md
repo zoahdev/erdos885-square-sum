@@ -140,3 +140,9 @@ fraction should be checked against the source `.tex` before publication.
 
 Papers © the author. Verification scripts in this repository are released under the
 MIT License; see [`LICENSE`](LICENSE).
+
+
+## Additional technical note (2026-10-02)
+
+[Squareclass growth in structured rational sumsets](notes/2026-10-02-squareclass-growth/README.md) gives deductions from known theorems that impose necessary restrictions on structured rational grids. This note constructs no unrestricted family and **does not resolve Erdős #885, including `k = 5`**. It remains a draft for review, not peer reviewed, and makes no originality or priority claim. AI assistance is disclosed; an exact-rational consistency checker accompanies the PDF and editable LaTeX source.
+
